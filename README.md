@@ -15,7 +15,7 @@ GitHub, on the other hand, provides a platform for hosting your Git repositories
 - [Basic Git Commands](#basic-git-commands-)
 - [Initializing a Repository](#initializing-a-repository-)
 - [Writing Good Commit Messages](#writing-good-commit-messages-)
-
+- [Working with branches](#working-with-branches-)
 
 ## Introduction to Git ✨👩‍💻
 
@@ -145,15 +145,13 @@ Writing clear and descriptive commit messages is essential for effective collabo
 ## Working with branches 🌟 🌿
 The branch is a pointer to a specific commit in your commit graph, also branches are used to track the version of your code.
 
-
-As we know the `master branch` 🔱 is the stable version of your code, so isolating it from any new feature until it has been tested and agreed to be used in your code, you can merge it.
+As we know the `master(main) branch` 🔱 is the stable version of your code, so isolating it from any new feature until it has been tested and agreed to be used in your code, you can merge it.
 
 The git branch command has four main usages which are(list/create/update/delete):
 
 <details>
   <summary>ℹ️ Click Here to Expand</summary>
 <br>
-
 
 1. 🌿 ***To list all the branches you have in your current project***:
       - ✨ Use the command `git branch ` 
