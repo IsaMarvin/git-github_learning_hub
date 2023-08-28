@@ -142,5 +142,101 @@ Writing clear and descriptive commit messages is essential for effective collabo
 
 </details>
 
+## Working with branches 🌟 🌿
+The branch is a pointer to a specific commit in your commit graph, also branches are used to track the version of your code.
+
+
+As we know the `master branch` 🔱 is the stable version of your code, so isolating it from any new feature until it has been tested and agreed to be used in your code, you can merge it.
+
+The git branch command has four main usages which are(list/create/update/delete):
+
+<details>
+  <summary>ℹ️ Click Here to Expand</summary>
+<br>
+
+
+1. 🌿 ***To list all the branches you have in your current project***:
+      - ✨ Use the command `git branch ` 
+        * Example
+           ```
+             IsaMarvin@laptop:~/git_github# git branch
+               * master
+           ```
+2. 🌿 ***To create a new branch***:
+      - ✨ Use the command `git branch your_branch_name`
+        * Example
+           ```
+             IsaMarvin@laptop:~/git_github# git branch    
+               yasermoamd
+           ```
+
+           ***List your branch to see if it's been created***
+           ```
+             IsaMarvin@laptop:~/git_github# git branch
+               * master
+                 yasermoamd
+           ```
+3. 🌿 ***To rename a branch using the git command***
+      - ✨ Use the command `git branch -m your_old_name  new_branch_name`
+         * Example
+            ```
+              IsaMarvin@laptop:~/git_github# git branch -m yasermoamd update_script
+            ```
+         
+            ***List your branch to see if it's been renamed***
+
+
+           ```
+             IsaMarvin@laptop:~/git_github# git branch
+               * master
+               update_script
+           ```
+4. 🌿 ***To delete any branch using the git command***
+      - ✨ Use the command `git branch -d your_branch_name`, by specifying the delete using `-d` before your branch name.
+        * Example
+           ***List your branches to see which you want to delete***
+           ```
+             IsaMarvin@laptop:~/git_github# git branch
+               * master
+                 update_script
+           ```
+           ***Now in this example we want to delete the `update_script` branch***
+           ```
+            IsaMarvin@laptop:~/git_github# git branch -d update_script
+           ```
+           ***List your branches again and see if it's been deleted***
+           ```
+             IsaMarvin@laptop:~/git_github# git branch
+               * master
+           ```
+5. 🌿 ***To switch between your branches***
+      * ✨ Use the commands are:
+           ```
+               1. git checkout your_branch_name
+               2. git switch your_branch_name  
+           ```
+         - Example
+            ```
+            IsaMarvin@laptop:~/git_github# git branch update_script
+            IsaMarvin@laptop:~/git_github# git branch
+               * master
+                 update_script
+            IsaMarvin@laptop:~/git_github# git checkout update_script
+              Switched to branch 'update_script'
+            IsaMarvin@laptop:~/git_github# git switch master
+              Switched to branch 'master'
+              Your branch is up to date with 'origin/master'.
+            ```
+  ***Notes that you can use each command in order to switch to your working branch***
+</details>
+
+  🕵️ ***things to keep in mind when working with branching:***
+
+  - ✨ Branch name should be descriptive and easy to remember.
+  - 🎯 It is a good practice to create branches based on the feature or bug you are working on.
+  - 🚀 You can have multiple branches open at the same time.
+  - 🔀 You can switch between branches at any time.
+
+
 ## Happy coding and happy Git adventures!✨🚀
  Remember, with Git by your side, you're equipped to conquer any coding challenge and collaborate with fellow developers. May your commits be meaningful, your branches be fruitful, and your merges be seamless. Keep exploring, keep learning, and keep sharing your coding magic with the world. Wishing you success and enjoyment in your coding journey! 
