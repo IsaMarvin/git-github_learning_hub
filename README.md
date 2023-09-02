@@ -17,6 +17,7 @@ GitHub, on the other hand, provides a platform for hosting your Git repositories
 - Writing Good Commit Messages
 - Working with branches
 - Creating an Effective README
+- Update your .gitconfig file 
 
 ## Introduction to Git ✨👩‍💻
 
@@ -303,6 +304,46 @@ Remember, your README is your project's gateway to the world. Make it inviting, 
 
   For inspiration, you can explore other projects on GitHub to see how they structure their READMEs.
 
+
+## Update your `.gitconfig` file and boost your Productivity ✨💡
+  - The `insteadOf` is an instruction in the `.gitconfig` file that tells Git to rewrite any URL that starts with a certain string to start with a different string.
+    * Example 
+      ```
+          [url "https://github.com"]
+                insteadOf = git@github.com
+        ```
+    - This tells Git that any time you clone a repository whose URL starts with `https://github`, Git should rewrite the URL to start with `git@github` instead. 
+    
+    - This way, you can always clone the repository using SSH, even if you type the wrong URL.
+
+    - The insteadOf directive can be used to rewrite URLs for any domain.
+
+  - In our case is the token issue that we are using continuously when we clone any repository or assign the remote URL including your token. 
+    * Example: 
+      1. Firstly you were cloning your repo using:
+         ```
+           git clone https://{YOUR_PERSONAL_TOKEN}@github.com/{YOUR_USERNAME}/alx-zero_day.git
+         ```
+       
+      2. The second way you add your token is by git command:
+         ```
+           git remote set-url origin  https://{YOUR_PERSONAL_TOKEN}@github.com/{YOUR_USERNAME}/alx-zero_day.git
+         ```
+
+  - In the previous example, we saw how you were fixing it, but we are going to update the `.gitconfig` in order to allow Git to add our token whenever we clone or init any repo.
+    1. Navigate to the `root` and List all the files and folders  including the hidden ones.
+      * Example:
+        ```
+          root@190347384:~# ls -al
+           -rw-r--r-- 1 root root   152 Sep  2 06:56 .gitconfig
+        ```
+        <h4><em>after listing all the files and directories look for the `.gitconfig` file.</em></h4>
+    2. Open the `.gitconfig` with your prefered text editor, `vi`, `emacs`, `nano`, and add the following:
+        ```
+          [url "https://{YOUR_PERSONAL_TOKEN}@github.com/"]
+                    insteadOf = https://github.com/
+        ```
+- By adding these two lines git will not ask you anymore for authentication credentials, but it will add your personal access token to your repository config file and it will use them to allow whenever `push` and `pull` easily in any feature project.
 
 ## Happy coding and happy Git adventures!✨🚀
  Remember, with Git by your side, you're equipped to conquer any coding challenge and collaborate with fellow developers. May your commits be meaningful, your branches be fruitful, and your merges be seamless. Keep exploring, keep learning, and keep sharing your coding magic with the world. Wishing you success and enjoyment in your coding journey! 
